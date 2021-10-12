@@ -26,12 +26,18 @@ main {
     transform: translate(-50%, -50%);
 }
 
+
 #username{
     padding: 20px;
     font-size: 18px;
     border-radius: 10px;
     border:none;
     margin: 10px;
+}
+
+.volume-icon{
+    height:20px;
+    width:20px;
 }
 
 #join-btn {
@@ -70,7 +76,9 @@ main {
 }
 
 .user-uid {
-    display: block;
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
     background-color: #1f1f1f8e;
     padding: 5px 10px;
     border-radius: 5px;
