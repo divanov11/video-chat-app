@@ -3,10 +3,10 @@ let client = AgoraRTC.createClient({mode:'rtc', codec:"vp8"})
 
 //#2
 let config = {
-    appid:null,
-    token:null,
+    appid:'a229e32bd40443a88bbf6ea5924fe5c6',
+    token:'006a229e32bd40443a88bbf6ea5924fe5c6IAAyeZYbOQoJ2YKpe4e9Hx5kNnDIkmgSzTFEH7rTZo0qfEZaLZcAAAAAEABumw/wjxlnYQEAAQCRGWdh',
     uid:null,
-    channel:null,
+    channel:'stream1',
 }
 
 //#3 - Setting tracks for when user joins
@@ -26,8 +26,9 @@ let remoteTracks = {}
 
 
 document.getElementById('join-btn').addEventListener('click', async () => {
+    config.uid = document.getElementById('username').value
     await joinStreams()
-    document.getElementById('join-btn').style.display = 'none'
+    document.getElementById('join-wrapper').style.display = 'none'
     document.getElementById('footer').style.display = 'flex'
 })
 
@@ -85,7 +86,7 @@ document.getElementById('leave-btn').addEventListener('click', async () => {
     await client.leave()
     document.getElementById('footer').style.display = 'none'
     document.getElementById('user-streams').innerHTML = ''
-    document.getElementById('join-btn').style.display = 'block'
+    document.getElementById('join-wrapper').style.display = 'block'
 
 })
 

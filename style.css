@@ -16,11 +16,26 @@ main {
     font-family: 'Permanent Marker', cursive;
 }
 
-#join-btn {
+
+#join-wrapper{
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+#username{
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border:none;
+    margin: 10px;
+}
+
+#join-btn {
+
     background-color: #1f1f1f8e;
     border: none;
     color: #fff;
